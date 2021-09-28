@@ -1,2 +1,7 @@
 library(gudhi)
+reticulate::py_install("gudhi")
+reticulate::conda_create("r-reticulate")
+reticulate::py_install("numpy", envname = "r-reticulate", method = "conda")
+reticulate::py_install("scipy", envname = "r-reticulate", method = "conda")
+reticulate::py_install("~/Softs/GraphSpace/", envname = "r-reticulate", method = "conda", pip = TRUE)
 install_gudhi()
